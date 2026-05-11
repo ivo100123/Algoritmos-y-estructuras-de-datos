@@ -1,0 +1,24 @@
+int longitud1;
+int longitud2;
+int longitud3;
+
+
+Console.WriteLine("Ingrese su primera longitud");
+longitud1 = int.Parse(Console.ReadLine());
+Console.WriteLine("Ingrese su segunda longitud");
+longitud2 = int.Parse(Console.ReadLine());
+Console.WriteLine("Ingrese su tercera longitud");
+longitud3 = int.Parse(Console.ReadLine());
+
+
+if (longitud1 > 0 && longitud2 > 0 && longitud3 > 0)
+{
+    if (longitud1 == longitud2 && longitud2 == longitud3) Console.WriteLine("Su triangulo es un equilátero");
+    else if (longitud1 == longitud2 && longitud2 != longitud3 || longitud1 != longitud2 && longitud2 == longitud3) Console.WriteLine("Su triangulo es un isóceles");
+    else Console.WriteLine("Su triangulo es un escaleno\n");
+
+
+    if(longitud1*longitud1 + longitud2*longitud2 == longitud3*longitud3) Console.WriteLine("Su triangulo también es rectangulo.");
+    else Console.WriteLine("Su triangulo no es rectangulo.");
+}
+else Console.WriteLine("Numeros invalidos. Intente otra vez.");
