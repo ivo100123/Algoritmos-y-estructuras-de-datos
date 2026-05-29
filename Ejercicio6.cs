@@ -9,9 +9,8 @@ int estrictamenteCreciente(int[] a)
 
     for (int i = 1; i < a.Length; i++)
     {
-        temporal++;
-        if (a[i] == temporal) contador++;
-
+        if (a[i] < temporal) contador++;
+        temporal = a[i];
     }
     
     return contador;
