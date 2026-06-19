@@ -21,4 +21,4 @@ for(int i = 0; i < matriz.GetLength(0); i++)
    
 } 
 
-Console.WriteLine($"La columna con el mayor es la fila {mayorColumna}");
+Console.WriteLine($"La columna con el mayor es la columna {mayorColumna}");
