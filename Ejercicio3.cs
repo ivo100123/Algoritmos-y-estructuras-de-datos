@@ -7,3 +7,31 @@ Consigna
 ○ Todo el contenido del archivo.
 ○ La cantidad total de caracteres.
 ○ La cantidad total de palabras.*/
+
+if (File.Exists("Diario.txt"))
+{
+
+    using (StreamReader archivo = new StreamReader("Diario.txt"))
+    {
+    
+        if (archivo.Peek() >= 0)
+        {
+            string archivoEntero = archivo.ReadToEnd();
+            Console.WriteLine("Archivo entero:");
+            Console.WriteLine(archivoEntero);
+            int caracteres = archivoEntero.Length;
+    
+            string[] palabras = archivoEntero.Split(
+            new char[] { ' ', '\r', '\n' },
+            StringSplitOptions.RemoveEmptyEntries
+            );
+            Console.WriteLine($"Total de caracteres: {caracteres}");
+            Console.WriteLine($"Total de palabras: {palabras.Length}");
+        }
+        else
+        {
+            Console.WriteLine("El archivo está vacío.");
+        }
+    }
+}
+else Console.WriteLine("Archivo inexistente");
