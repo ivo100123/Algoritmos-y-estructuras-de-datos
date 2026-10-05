@@ -16,6 +16,7 @@ namespace Project3
         private float velocidadGlobal = 5.0f;
         private Vector2 posicion = Vector2.Zero;
         private Rectangle[] frames;
+        private int frame_actual;
 
 
         public Game1()
@@ -39,6 +40,8 @@ namespace Project3
             frames[9] = new Rectangle(432, 576, 48, 64);
             frames[10] = new Rectangle(480, 640, 48, 64);
             frames[11] = new Rectangle(520, 704, 48, 64);
+
+            frame_actual = 0;
 
 
 
